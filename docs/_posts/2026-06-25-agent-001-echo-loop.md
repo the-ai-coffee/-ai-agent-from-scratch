@@ -2,6 +2,7 @@
 layout: post
 title: "Agent-001: The Echo Loop"
 date: 2026-06-25
+author: mikamboo
 ---
 
 Every agent, no matter how capable, is built around the same shape: read an
