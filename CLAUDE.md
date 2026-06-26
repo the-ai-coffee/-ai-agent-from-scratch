@@ -12,11 +12,16 @@ published via GitHub Pages from `docs/`.
 ## Repo structure
 
 - `agents/agent-NNN-<slug>/` -- one self-contained folder per stage. Each
-  folder holds that stage's `agent.py` and its `test_agent.py`. Folders have
-  no `__init__.py`, which lets pytest add each stage's directory to
-  `sys.path` independently and lets `test_agent.py` do `from agent import run`
-  without package-qualifying imports. Don't add `__init__.py` to these
-  folders.
+  folder holds that stage's `agent.py`, its `test_agent.py`, and a small
+  `conftest.py` (sys.path insertion + evicting any cached `agent` module).
+  Folders have no `__init__.py`. Since every stage's `test_agent.py` shares
+  the same basename and does `from agent import run` without
+  package-qualifying imports, pytest's default import mode can't
+  disambiguate them once more than one stage exists in a single test run --
+  `pyproject.toml` sets `--import-mode=importlib` and each stage's
+  `conftest.py` makes the unqualified import resolve to that stage's own
+  `agent.py`. Don't add `__init__.py` to these folders; do add a
+  `conftest.py` (copy an existing stage's) to any new one.
 - `docs/` -- the GitHub Pages site (Jekyll, `jekyll-theme-minimal`).
   `docs/_posts/` holds one post per stage, named
   `YYYY-MM-DD-agent-NNN-<slug>.md` with Jekyll front matter

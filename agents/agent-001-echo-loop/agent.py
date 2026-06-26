@@ -11,8 +11,11 @@ import sys
 
 def run(input_stream, output_stream):
     """Read lines from input_stream and write them to output_stream.
-
     Stops on EOF or on the first empty line.
+
+    NOTE: The prompt is written with an explicit `readline()` call rather than 
+    `for line in input_stream` -- a `for` loop would call `readline()` itself 
+    *before* the loop body runs, so the `User> ` prompt would never appear before the blocking read.
     """
     while True:
         output_stream.write("User> ")
@@ -24,7 +27,6 @@ def run(input_stream, output_stream):
         if not line:
             break
         output_stream.write(f"Agent> {line}\n")
-
 
 if __name__ == "__main__":
     run(sys.stdin, sys.stdout)

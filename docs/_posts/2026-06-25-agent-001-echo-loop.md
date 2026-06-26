@@ -33,11 +33,6 @@ def run(input_stream, output_stream):
 - **Action**: writing that line back to `output_stream`.
 - **Loop**: the `while` loop, which continues until EOF or an empty line.
 
-The prompt is written with an explicit `readline()` call rather than
-`for line in input_stream` -- a `for` loop would call `readline()` itself
-*before* the loop body runs, so the `User> ` prompt would never appear
-before the blocking read.
-
 Passing in `input_stream` and `output_stream` (rather than hardcoding
 `sys.stdin`/`sys.stdout`) is what makes this testable without spawning a
 process -- the tests in `test_agent.py` just pass `io.StringIO` objects.
