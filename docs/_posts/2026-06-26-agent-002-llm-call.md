@@ -9,7 +9,7 @@ Agent-001 built the read-act-repeat loop with the simplest possible action: echo
 
 ## The code
 
-[`agents/agent-002-llm-call/agent.py`](https://github.com/the-ai-coffee/-ai-agent-from-scratch/blob/main/agents/agent-002-llm-call/agent.py)
+[`agents/agent-002-llm-call/agent.py`](https://github.com/the-ai-coffee/ai-agent-from-scratch/blob/main/agents/agent-002-llm-call/agent.py)
 looks almost identical to agent-001's loop:
 
 ```python
@@ -46,8 +46,7 @@ treated each line as an independent echo.
 ## Why `client` is a parameter
 
 `client` defaults to a real `Anthropic()` instance (which reads
-`ANTHROPIC_API_KEY` from the environment), but it can be overridden. That's the same idea as passing in `input_stream`/`output_stream` instead of hardcoding `sys.stdin`/`sys.stdout`: it lets `test_agent.py` substitute a fake client that returns a canned reply, so the test suite runs without
-hitting the network or needing an API key.
+`ANTHROPIC_API_KEY` from the environment), but it can be overridden. That's the same idea as passing in `input_stream`/`output_stream` instead of hardcoding `sys.stdin`/`sys.stdout`: it lets `test_agent.py` substitute a fake client that returns a canned reply, so the test suite runs without hitting the network or needing an API key.
 
 ## Running it
 

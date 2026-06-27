@@ -1,19 +1,26 @@
-# AI Agent Series
+# AI Agent from scratch
 
-> What's actually inside an "AI agent"? No frameworks, no magic -- just a loop, a model, and one new mechanism added at a time.
+> What's *actually* inside an "AI agent"? No magic. Just a loop !
 
-Most agent frameworks hide the interesting part behind an abstraction.
-This repo builds the same capabilities they offer -- memory, tools, RAG, multi-step reasoning, evals -- from scratch, one small stage at a time, so each piece is legible before it's automated away.
+LangGraph, CrewAI, AutoGen -- they all wrap the same small handful of mechanisms behind an abstraction, and once you've used one, it's easy to believe agents are complicated. They aren't.
+
+This repo builds a real agent **from scratch** -- memory, tools, multi-step reasoning, evals -- one small stage at a time. Every stage adds exactly one new piece, so each is legible before any framework automates it away. Read the code, read the post, and by the end you won't just understand agents. You'll have built one.
 
 ## Structure
 
 Every stage lives in its own self-contained folder under `agents/`, adds exactly one new mechanism on top of the last, and ships with a blog post in `docs/` explaining *why* that mechanism works the way it does -- not just what the code does.
 
+- **Start here**: [Introduction: Building an Agent From Scratch](docs/_posts/2026-06-24-agent-000-introduction.md) -- objectives and the full roadmap.
 - **Code**: [`agents/`](agents/) -- one folder per stage.
 - **Posts**: [`docs/`](docs/) -- published via GitHub Pages.
 - **Roadmap**: [ROADMAP.md](ROADMAP.md) -- full stage-by-stage design rationale.
 
 See [CLAUDE.md](CLAUDE.md) for repo conventions and commands.
+
+## Requirements
+
+- Python, managed with [`uv`](https://docs.astral.sh/uv/).
+- No frameworks -- just the standard library and one LLM SDK.
 
 ## Stages
 

@@ -12,7 +12,7 @@ something concrete to extend.
 
 ## The code
 
-[`agents/agent-001-echo-loop/agent.py`](https://github.com/the-ai-coffee/-ai-agent-from-scratch/blob/main/agents/agent-001-echo-loop/agent.py)
+[`agents/agent-001-echo-loop/agent.py`](https://github.com/the-ai-coffee/ai-agent-from-scratch/blob/main/agents/agent-001-echo-loop/agent.py)
 implements the loop with no dependencies:
 
 ```python
