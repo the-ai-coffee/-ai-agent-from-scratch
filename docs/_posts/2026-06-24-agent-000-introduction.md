@@ -56,8 +56,8 @@ recognize all of it.
 
 | # | Stage | What it adds |
 |---|-------|---------------|
-| 001 | [The Echo Loop](2026-06-25-agent-001-echo-loop.md) | The bare read-act-repeat loop, no LLM yet. |
-| 002 | [The LLM Call](2026-06-26-agent-002-llm-call.md) | The action becomes a single stateless LLM call. |
+| 001 | [The Echo Loop]({% post_url 2026-06-25-agent-001-echo-loop %}) | The bare read-act-repeat loop, no LLM yet. |
+| 002 | [The LLM Call]({% post_url 2026-06-26-agent-002-llm-call %}) | The action becomes a single stateless LLM call. |
 | 003 | conversation-history | Short-term memory: a `messages` list carried across turns. |
 | 004 | system-prompt | A configurable persona/instructions, separate from turns. |
 | 005 | single-tool-call | The model can request one tool; we run it. |
@@ -76,5 +76,5 @@ is, what it tests, and how it connects to neighboring stages -- lives in
 ## Start here
 
 It begins where every agent begins, stripped of everything else: a loop.
-[Agent-001 builds the loop](2026-06-25-agent-001-echo-loop.md) that
+[Agent-001 builds the loop]({% post_url 2026-06-25-agent-001-echo-loop %}) that
 everything else extends -- no model, no tools, just the heartbeat. See you there.
