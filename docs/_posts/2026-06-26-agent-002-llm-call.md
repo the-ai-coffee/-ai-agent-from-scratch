@@ -3,6 +3,7 @@ layout: post
 title: "Agent-002: The LLM Call"
 date: 2026-06-26
 author: mikamboo
+tags: [ai, agents, llm, claude, python, anthropic-sdk]
 ---
 
 Agent-001 built the read-act-repeat loop with the simplest possible action: echo the line back. This stage keeps that loop completely intact and swaps in the only thing that changes between an echo and an agent -- the action itself is now a call an LLM, for instance Claude AI.
@@ -59,4 +60,4 @@ Type a line, press enter, see Claude's reply. Press enter on an empty line to st
 
 ## What's next
 
-This stage is stateless -- Agent has no idea what you said on the previousline. Agent-003 will start carrying conversation history between turns, andl ater stages will add tools so Agent can act on more than just text.
+This stage is stateless -- Agent has no idea what you said on the previousline. Agent-003 will start carrying conversation history between turns, and later stages will add tools so Agent can act on more than just text.

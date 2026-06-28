@@ -3,6 +3,7 @@ layout: post
 title: "Intro: Building an AI Agent From Scratch"
 date: 2026-06-24
 author: mikamboo
+tags: [ai, agents, from-scratch, python, llm]
 ---
 
 "AI agent" has become one of those words that sounds more complicated than

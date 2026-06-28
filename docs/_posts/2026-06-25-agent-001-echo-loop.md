@@ -3,6 +3,7 @@ layout: post
 title: "Agent-001: The Echo Loop"
 date: 2026-06-25
 author: mikamboo
+tags: [ai, agents, from-scratch, python, agent-loop, testing]
 ---
 
 Every agent, no matter how capable, is built around the same shape: read an
