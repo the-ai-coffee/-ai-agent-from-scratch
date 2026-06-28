@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building an AI Agent From Scratch"
+title: "Intro: Building an AI Agent From Scratch"
 date: 2026-06-24
 author: mikamboo
 ---
@@ -15,7 +15,6 @@ So this series does the one thing that actually demystifies agents:
 one mechanism added at a time, until a bare loop grows into a real agent
 that can remember, reason, and use tools.
 
-Because here's what you find once you look inside: there's no magic to find.
 **LangGraph, CrewAI, AutoGen -- they all wrap the same small handful of
 mechanisms:** a loop, a model call, some memory, a few tools and some advanced features. That's it. And the best way to truly understand those pieces is to write them yourself.
 
@@ -25,13 +24,10 @@ So let's write them ourselves.
 
 Each stage lives in its own self-contained folder under
 [`agents/`](https://github.com/the-ai-coffee/ai-agent-from-scratch/tree/main/agents),
-and adds **exactly one** new mechanism on top of the last -- never two at
-once.
+and adds **exactly one** new mechanism on top of the last.
 
 That single constraint is the whole pedagogy. When something finally clicks
--- or breaks -- there is only ever *one* new thing it could be. No more lost
-afternoons. You'll always know exactly which moving part you're looking at,
-because you just added it.
+-- or breaks -- there is only ever *one* new thing it could be. You'll always know exactly which moving part you're looking at, because you just added it.
 
 Every stage ships with a post like this one, explaining *why* the mechanism
 works the way it does -- not just what the code does. Written assuming you
@@ -80,5 +76,4 @@ is, what it tests, and how it connects to neighboring stages -- lives in
 
 It begins where every agent begins, stripped of everything else: a loop.
 [Agent-001 builds the loop](2026-06-25-agent-001-echo-loop.md) that
-everything else extends -- no model, no tools, just the heartbeat. See you
-there.
+everything else extends -- no model, no tools, just the heartbeat. See you there.
