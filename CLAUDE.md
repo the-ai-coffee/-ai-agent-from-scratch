@@ -62,6 +62,19 @@ published via GitHub Pages from `docs/`.
 - Every stage's blog post explains *why* that stage's mechanism works the
   way it does, not just what the code does -- write posts assuming the
   reader has the code open alongside the post.
+- Keep the tone accessible to non-technical readers: write so someone
+  without a programming background can follow the idea. Lead with plain
+  language and everyday analogies, introduce jargon only after explaining it
+  in ordinary terms, and favour short sentences over dense technical prose.
+  The code is there for the technical reader; the explanation should let a
+  non-coder still grasp what's happening and why it matters.
+- The series should read like a single story from start to finish, not a set
+  of disconnected technical notes. Each post picks up the thread from the
+  previous one (briefly recap where we were and what we just added), frames
+  the new stage as the next step in that journey, and ends by pointing
+  forward to what comes next. A reader going through the posts in order
+  should feel a continuous narrative -- a beginning, a middle, and an end --
+  with each stage a chapter that builds on the last.
 - Every new stage ships **both** an English post (`docs/_posts/`) and its
   French translation (`docs/fr/_posts/<same-name>-fr.md`). Keep them in sync:
   when a post is edited, edit both. The French post's "Et après" section and
