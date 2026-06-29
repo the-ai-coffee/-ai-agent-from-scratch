@@ -27,6 +27,17 @@ published via GitHub Pages from `docs/`.
   `YYYY-MM-DD-agent-NNN-<slug>.md` with Jekyll front matter
   (`layout: post`, `title`, `date`). `docs/index.md` lists all posts
   automatically via `site.posts` -- no manual index maintenance needed.
+  The site is bilingual (English + French) with no Jekyll plugin: French
+  posts live in `docs/fr/_posts/`, and because a directory above `_posts`
+  becomes a Jekyll category, every French post is automatically tagged with
+  the `fr` category. `docs/index.md` (English) lists posts but excludes that
+  category (`{% unless post.categories contains 'fr' %}`); `docs/fr/index.md`
+  (French, `permalink: /fr/`) lists only `site.categories.fr`. French post
+  files mirror the English filename with a `-fr` slug suffix (e.g.
+  `2026-06-25-agent-001-echo-loop-fr.md`) so `{% post_url %}` stays
+  unambiguous -- two posts can't share a slug. Each post starts with an
+  `EN | FR` language switcher line linking to its counterpart via
+  `{% post_url %}`.
 - `pyproject.toml` / `uv.lock` -- repo-wide dependencies, managed with `uv`.
   Stage-specific dependencies (e.g. an LLM SDK for later agents) should be
   added with `uv add <package>` as they're introduced, since stages are
@@ -51,6 +62,10 @@ published via GitHub Pages from `docs/`.
 - Every stage's blog post explains *why* that stage's mechanism works the
   way it does, not just what the code does -- write posts assuming the
   reader has the code open alongside the post.
+- Every new stage ships **both** an English post (`docs/_posts/`) and its
+  French translation (`docs/fr/_posts/<same-name>-fr.md`). Keep them in sync:
+  when a post is edited, edit both. The French post's "Et après" section and
+  internal links must point to the French (`-fr`) slugs, not the English ones.
 - Each stage's post ends with a "What's next" section linking forward to
   the next stage's post. Link between posts with
   `[Text]({{ site.baseurl }}{% post_url YYYY-MM-DD-agent-NNN-<slug> %})` --
