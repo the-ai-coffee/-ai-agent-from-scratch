@@ -62,4 +62,4 @@ Tapez une ligne, appuyez sur Entrée, voyez la réponse de Claude. Appuyez sur E
 
 ## Et après
 
-Cette étape est sans état — l'agent n'a aucune idée de ce que vous avez dit à la ligne précédente. Agent-003 commencera à transporter l'historique de conversation entre les tours, et les étapes ultérieures ajouteront des outils pour que l'agent puisse agir sur plus que du simple texte.
+Cette étape est sans état — l'agent n'a aucune idée de ce que vous avez dit à la ligne précédente. [Agent-003]({{ site.baseurl }}{% post_url 2026-06-27-agent-003-conversation-history-fr %}) commence à transporter l'historique de conversation entre les tours, et les étapes ultérieures ajouteront des outils pour que l'agent puisse agir sur plus que du simple texte.

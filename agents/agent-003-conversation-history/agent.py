@@ -1,8 +1,10 @@
-"""Agent-002: LLM Call.
+"""Agent-003: Conversation History.
 
-Same read-act-repeat loop as agent-001, but the "act" step is now a real
-LLM call instead of an echo. Each line is sent to Claude independently --
-no conversation history is kept between turns.
+Same read-act-repeat loop as agent-002, but the agent now remembers the
+conversation. Instead of sending each line on its own, it keeps a growing
+`messages` list -- every user line and every reply is appended -- and sends
+the whole history to Claude on each turn. That history is what turns a
+stateless responder into something that can follow a conversation.
 """
 
 import sys
@@ -13,11 +15,12 @@ MODEL = "claude-haiku-4-5-20251001"
 
 
 def run(input_stream, output_stream, client=None):
-    """Read lines from input_stream, send each to Claude, write the reply.
+    """Read lines from input_stream, send the running history, write the reply.
 
     Stops on EOF or on the first empty line.
     """
     client = client or Anthropic()
+    messages = []
 
     while True:
         output_stream.write("User> ")
@@ -28,12 +31,15 @@ def run(input_stream, output_stream, client=None):
         line = line.rstrip("\n")
         if not line:
             break
+        messages.append({"role": "user", "content": line})
         message = client.messages.create(
             model=MODEL,
             max_tokens=1024,
-            messages=[{"role": "user", "content": line}],
+            messages=messages,
         )
-        output_stream.write(f"Agent> {message.content[0].text}\n")
+        reply = message.content[0].text
+        messages.append({"role": "assistant", "content": reply})
+        output_stream.write(f"Agent> {reply}\n")
 
 
 if __name__ == "__main__":

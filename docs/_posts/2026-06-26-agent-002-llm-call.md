@@ -62,4 +62,4 @@ Type a line, press enter, see Claude's reply. Press enter on an empty line to st
 
 ## What's next
 
-This stage is stateless -- Agent has no idea what you said on the previousline. Agent-003 will start carrying conversation history between turns, and later stages will add tools so Agent can act on more than just text.
+This stage is stateless -- Agent has no idea what you said on the previous line. [Agent-003]({{ site.baseurl }}{% post_url 2026-06-27-agent-003-conversation-history %}) starts carrying conversation history between turns, and later stages will add tools so Agent can act on more than just text.
