@@ -82,4 +82,4 @@ Ask it a few things and notice the consistent tone -- short and plain, because t
 
 ## What's next
 
-Our agent now has a memory and a persona, but it still only ever *talks*. It can't look anything up, run a calculation, or touch the world outside its own words. Agent-005 starts to fix that: we give the model its first **tool** and let it ask us to run something on its behalf -- the real beginning of agent-like behaviour.
+Our agent now has a memory and a persona, but it still only ever *talks*. It can't look anything up, run a calculation, or touch the world outside its own words. [Agent-005]({{ site.baseurl }}{% post_url 2026-06-29-agent-005-single-tool-call %}) starts to fix that: we give the model its first **tool** and let it ask us to run something on its behalf -- the real beginning of agent-like behaviour.

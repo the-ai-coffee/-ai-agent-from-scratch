@@ -82,4 +82,4 @@ Posez-lui quelques questions et remarquez le ton constant — court et simple, p
 
 ## Et après
 
-Notre agent a maintenant une mémoire et une persona, mais il ne fait toujours que *parler*. Il ne peut rien rechercher, effectuer un calcul, ni toucher au monde au-delà de ses propres mots. Agent-005 commence à corriger cela : nous donnons au modèle son premier **outil** et le laissons nous demander d'exécuter quelque chose pour lui — le véritable début d'un comportement d'agent.
+Notre agent a maintenant une mémoire et une persona, mais il ne fait toujours que *parler*. Il ne peut rien rechercher, effectuer un calcul, ni toucher au monde au-delà de ses propres mots. [Agent-005]({{ site.baseurl }}{% post_url 2026-06-29-agent-005-single-tool-call-fr %}) commence à corriger cela : nous donnons au modèle son premier **outil** et le laissons nous demander d'exécuter quelque chose pour lui — le véritable début d'un comportement d'agent.

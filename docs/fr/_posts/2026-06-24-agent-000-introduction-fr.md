@@ -70,7 +70,7 @@ AutoGen, pour que vous puissiez enfin voir ce que ces frameworks font
 | 002 | [L'appel au LLM]({{ site.baseurl }}{% post_url 2026-06-26-agent-002-llm-call-fr %}) | L'action devient un unique appel LLM sans état. |
 | 003 | [L'historique de conversation]({{ site.baseurl }}{% post_url 2026-06-27-agent-003-conversation-history-fr %}) | Mémoire à court terme : une liste `messages` transportée d'un tour à l'autre. |
 | 004 | [Le prompt système]({{ site.baseurl }}{% post_url 2026-06-28-agent-004-system-prompt-fr %}) | Une persona/des instructions configurables, séparées des tours. |
-| 005 | single-tool-call | Le modèle peut demander un outil ; on l'exécute. |
+| 005 | [Le premier outil]({{ site.baseurl }}{% post_url 2026-06-29-agent-005-single-tool-call-fr %}) | Le modèle peut demander un outil ; on l'exécute. |
 | 006 | tool-result-loop | Le résultat de l'outil revient au modèle pour une réponse finale. |
 | 007 | RAG | Mémoire à long terme : récupération sur un petit vector store, branchée comme un outil. |
 | 008 | multi-tool-dispatch | Un vrai registre : le modèle choisit parmi plusieurs outils, ou aucun. |

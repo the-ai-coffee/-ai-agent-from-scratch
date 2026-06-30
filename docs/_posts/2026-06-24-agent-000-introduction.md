@@ -62,7 +62,7 @@ recognize all of it.
 | 002 | [The LLM Call]({{ site.baseurl }}{% post_url 2026-06-26-agent-002-llm-call %}) | The action becomes a single stateless LLM call. |
 | 003 | [Conversation History]({{ site.baseurl }}{% post_url 2026-06-27-agent-003-conversation-history %}) | Short-term memory: a `messages` list carried across turns. |
 | 004 | [The System Prompt]({{ site.baseurl }}{% post_url 2026-06-28-agent-004-system-prompt %}) | A configurable persona/instructions, separate from turns. |
-| 005 | single-tool-call | The model can request one tool; we run it. |
+| 005 | [The First Tool]({{ site.baseurl }}{% post_url 2026-06-29-agent-005-single-tool-call %}) | The model can request one tool; we run it. |
 | 006 | tool-result-loop | The tool's result loops back to the model for a final answer. |
 | 007 | RAG | Long-term memory: retrieval over a small vector store, wired up as a tool. |
 | 008 | multi-tool-dispatch | A real registry: the model chooses among several tools, or none. |

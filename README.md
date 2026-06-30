@@ -30,7 +30,7 @@ See [CLAUDE.md](CLAUDE.md) for repo conventions and commands.
 | 002 | llm-call | Built | [agents/agent-002-llm-call](agents/agent-002-llm-call) | [The LLM Call](docs/_posts/2026-06-26-agent-002-llm-call.md) |
 | 003 | conversation-history (short-term memory) | Built | [agents/agent-003-conversation-history](agents/agent-003-conversation-history) | [Conversation History](docs/_posts/2026-06-27-agent-003-conversation-history.md) |
 | 004 | system-prompt | Built | [agents/agent-004-system-prompt](agents/agent-004-system-prompt) | [The System Prompt](docs/_posts/2026-06-28-agent-004-system-prompt.md) |
-| 005 | single-tool-call | Planned | -- | -- |
+| 005 | single-tool-call | Built | [agents/agent-005-single-tool-call](agents/agent-005-single-tool-call) | [The First Tool](docs/_posts/2026-06-29-agent-005-single-tool-call.md) |
 | 006 | tool-result-loop | Planned | -- | -- |
 | 007 | RAG (long-term memory) | Planned | -- | -- |
 | 008 | multi-tool-dispatch | Planned | -- | -- |
